@@ -290,7 +290,7 @@ class AuthorizeControllerTest extends \PHPUnit_Framework_TestCase
             ->expects($this->at(0))
             ->method('renderResponse')
             ->with(
-                'FOSOAuthServerBundle:Authorize:authorize.html.twig',
+                '@FOSOAuthServer/Authorize/authorize.html.twig',
                 [
                     'form'   => $this->formView,
                     'client' => $this->client,
@@ -449,7 +449,7 @@ class AuthorizeControllerTest extends \PHPUnit_Framework_TestCase
             ->expects($this->at(0))
             ->method('renderResponse')
             ->with(
-                'FOSOAuthServerBundle:Authorize:authorize.html.twig',
+                '@FOSOAuthServer/Authorize/authorize.html.twig',
                 [
                     'form'   => $this->formView,
                     'client' => $this->client,

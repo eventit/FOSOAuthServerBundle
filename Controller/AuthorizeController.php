@@ -175,11 +175,11 @@ class AuthorizeController
         }
 
         return $this->templating->renderResponse(
-            'FOSOAuthServerBundle:Authorize:authorize.html.'.$this->templateEngineType,
-            array(
-                'form'   => $form->createView(),
+            '@FOSOAuthServer/Authorize/authorize.html.'.$this->templateEngineType,
+            [
+                'form' => $form->createView(),
                 'client' => $this->getClient(),
-            )
+            ]
         );
     }
 
